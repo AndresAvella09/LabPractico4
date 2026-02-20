@@ -1,6 +1,6 @@
 name: CI - Pipeline Orchestration Tests 
 on: [push, pull_request] 
-  jobs: 
+jobs: 
     test-orchestration: 
       runs-on: ubuntu-latest 
       strategy: 
