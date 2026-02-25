@@ -1,7 +1,7 @@
 class DataEnricher:
-    def __init__(self, data):
-        self.data = data
+    def __init__(self, config):
+        self.config = config
 
-    def enrich(self):
-        enriched_data = self.data
+    def enrich(self, data):
+        enriched_data = data
         return enriched_data
