@@ -44,7 +44,7 @@ jobs:
           echo "Pipeline execution completed"
 
       - name: Upload execution artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: pipeline-outputs-${{ github.run_id }}
           path: |
