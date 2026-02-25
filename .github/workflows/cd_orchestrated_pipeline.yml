@@ -40,7 +40,7 @@ jobs:
       - name: Execute orchestrated pipeline
         run: |
           mkdir -p logs
-          python src/orchestrator.py
+          python -m src
           echo "Pipeline execution completed"
 
       - name: Upload execution artifacts
