@@ -34,7 +34,10 @@ class TestPipelineOrchestration:
 
     def test_execution_flow_failure(self):
         """Test flujo de ejecución con fallo en validación"""
-        with patch('src.data_validation.DataValidator') as mock_validator:
+        with patch('src.data_validation.DataValidator') as mock_validator, \
+             patch('src.data_processing.DataProcessor') as mock_processor, \
+             patch('src.data_enrichment.DataEnricher') as mock_enricher, \
+             patch('src.quality_checks.QualityChecker') as mock_quality:
 
             # Configurar mock para fallo en validación
             mock_validator.return_value.validate.return_value = {
