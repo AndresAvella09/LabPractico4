@@ -13,4 +13,8 @@ class DataProcessor:
     def process(self):
         self.clean_data()
         self.transform_data()
-        return self.data
+
+        return {
+            'processed_data': self.data,
+            'record_count': len(self.data)
+        }
